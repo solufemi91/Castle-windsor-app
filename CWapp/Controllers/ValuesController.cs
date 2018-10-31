@@ -9,10 +9,19 @@ namespace CWapp.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
+
+        private ICompositionRoot _compositionRoot;
+
+        public ValuesController(ICompositionRoot compositionRoot)
+        {
+            _compositionRoot = compositionRoot;
+        }
+
+
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            _compositionRoot.LogMessage("Hello");
             return new string[] { "value1", "value2" };
         }
 
