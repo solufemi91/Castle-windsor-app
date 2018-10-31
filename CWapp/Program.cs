@@ -17,18 +17,6 @@ namespace CWapp
         static void Main(string[] args)
         {
 
-
-            //var container = new WindsorContainer();
-
-            ////// Register the CompositionRoot type with the container
-            //container.Register(Component.For<ICompositionRoot>().ImplementedBy<CompositionRoot>());
-
-            ////// Resolve an object of type ICompositionRoot (ask the container for an instance)
-            ////// This is analagous to calling new() in a non-IoC application.
-            //var root = container.Resolve<ICompositionRoot>();
-
-            ////root.LogMessage("Hello from my very first resolved class!");
-
             BuildWebHost(args).Run();
 
         }
